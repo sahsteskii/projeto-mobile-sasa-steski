@@ -19,37 +19,36 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Olá Samara</ThemedText>
         
-      </ThemedView><Pressable
-          onPress={() => router.push('/explore')}
-          style={({ pressed }) => ({
-            backgroundColor: pressed ? '#fdfffe' : '#fdfffe', // Escurece quando pressionado
-            padding: 6,
-            borderRadius: 30,
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: 38,
-            transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }], // Efeito de "afundar"
-          })}
-        >
-          <ThemedText style={{ color: '', fontWeight: 'bold' }}>PIX</ThemedText>
-        </Pressable>
+      </ThemedView>
 
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Saldo da conta</ThemedText>
         <ThemedText>
           
-           500.000,00
+           R$: 500.000,00
         </ThemedText>
-      </ThemedView>
+      </ThemedView><Pressable
+          onPress={() => router.push('/explore')}
+          style={({ pressed }) => ({
+            backgroundColor: pressed ? '#ff8c00' : '#ff8c00', // Escurece quando pressionado
+            padding: 6,
+            borderRadius: 30,
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: 50,
+            transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }], // Efeito de "afundar"
+          })}
+        >
+          <ThemedText style={{ color: '', fontWeight: 'bold' }}>PIX</ThemedText>
+        </Pressable>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Bora guardar dinheiro no seu porquinho?</ThemedText>
+        <ThemedText type="subtitle">Fatura</ThemedText>
         <ThemedText>
-          o investimento pode te gerar lucro
+          R$: 5000,00
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">CARTAO VIRTUAL</ThemedText>
-        
       </ThemedView>
     </ParallaxScrollView>
   );

@@ -7,6 +7,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { FontAwesome6 } from '@expo/vector-icons';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -29,15 +30,15 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'inicial',
+          title: 'Conta',
           tabBarIcon: ({ color }) => <AntDesign name="user" size={24} color="orange" />
         }}
       />
       <Tabs.Screen
-        name="Area do pix"
+        name="explore"
         options={{
-          title: 'pesquise',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'pix',
+          tabBarIcon: ({ color }) => <FontAwesome6 name="pix" size={24} color="orange" />
         }}
       />
     </Tabs>
