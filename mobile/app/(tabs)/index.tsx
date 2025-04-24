@@ -39,7 +39,7 @@ export default function HomeScreen() {
             transform: pressed ? [{ scale: 0.95 }] : [{ scale: 1 }], // Efeito de "afundar"
           })}
         >
-          <ThemedText style={{ color: '', fontWeight: 'bold' }}>PIX</ThemedText>
+          <ThemedText style={{ color: 'dark', fontWeight: 'bold' }}>PIX</ThemedText>
         </Pressable>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Fatura</ThemedText>
